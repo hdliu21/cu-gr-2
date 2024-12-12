@@ -89,7 +89,7 @@ include_directories(${PATH_CUGR})
 #################
 
 # TODO: set static under release mode only
-set_target_properties(route PROPERTIES LINK_FLAGS "-static -Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
+set_target_properties(route PROPERTIES LINK_FLAGS "-Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
 
 # LEF/DEF
 target_link_libraries(route lef)
